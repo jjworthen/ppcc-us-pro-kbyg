@@ -1,0 +1,21 @@
+# Local automation outputs
+automation/reports/*.md
+!automation/reports/.gitkeep
+
+# Node / tooling
+node_modules/
+npm-debug.log*
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+
+# Azure local state
+.azure/*/.env
+.azure/*/config.json

@@ -100,6 +100,8 @@ Official references: [Invite collaborators](https://docs.github.com/en/repositor
 
 Deployment note, October 12, 2026: this guide was deployed to Vibe Hub as **US PRO - PPCC26 Know Before You Go** at `https://vibehub.microsoft.com/app/john-worthen-1719wg/` using the local VibeHub API key and direct single-HTML upload. The active version was overwritten in place after aligning the document title and fixing VibeHub subpath navigation title handling. Authenticated Vibe Hub preview loaded successfully with no guide JavaScript errors; the only console warning was Vibe Hub's hosted-app service-worker notice.
 
+GitHub Pages note, October 15, 2026: the personal GitHub repository `jjworthen/ppcc-us-pro-kbyg` was made public and GitHub Pages was enabled from the `main` branch root. Public app URL: `https://jjworthen.github.io/ppcc-us-pro-kbyg/`. Keep the Microsoft-managed repository private unless a separate governance decision changes that.
+
 The workspace contains existing links under `https://vibehub.microsoft.com/app/...`. A read-only request to [Vibe Hub](https://vibehub.microsoft.com/) on October 9 returned **HTTP 401**. That proves the endpoint requires authentication for that request; it does **not** prove all app URLs are internal-only, nor that anonymous external publishing is supported.
 
 No authoritative public documentation was found establishing external/anonymous sharing for this specific Microsoft Vibe Hub. Do not assume it is a SharePoint hub, a Power Apps product, or a public static web host.

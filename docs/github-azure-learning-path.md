@@ -38,6 +38,12 @@ Two workflows are included:
 
 The schedule watcher does not publish anything. It reports findings for review.
 
+Current environment note: GitHub-hosted Actions runners are disabled for the
+managed account used for the first private repository deployment. The workflow
+files are still included for learning, but automatic push/cron triggers are
+paused until hosted runners are enabled or a self-hosted runner is attached.
+Local commands provide the same validation and watcher behavior in the meantime.
+
 ## 4. Pull requests
 
 Once the watcher report is useful, the next learning step is a PR flow:

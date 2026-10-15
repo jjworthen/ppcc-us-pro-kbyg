@@ -11,8 +11,9 @@ on:
         options:
           - "true"
           - "false"
-  schedule:
-    - cron: "0 14 * * 1-5"
+
+# Hosted GitHub Actions runners are disabled for the current managed account.
+# Add a cron schedule after hosted or self-hosted runners are available.
 
 permissions:
   contents: read

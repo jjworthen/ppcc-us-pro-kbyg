@@ -2,10 +2,9 @@ name: Validate guide
 
 on:
   workflow_dispatch:
-  pull_request:
-  push:
-    branches:
-      - main
+
+# Hosted GitHub Actions runners are disabled for the current managed account.
+# Keep this workflow manual until hosted or self-hosted runners are available.
 
 permissions:
   contents: read

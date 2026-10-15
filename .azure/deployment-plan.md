@@ -1,6 +1,6 @@
 # Azure Deployment Plan
 
-> **Status:** GitHub foundation pushed to private Microsoft-managed repo
+> **Status:** GitHub foundation pushed to private Microsoft-managed and personal repos
 
 Generated: 2026-10-15
 
@@ -180,3 +180,4 @@ Before any Azure deployment, subscription, location, and quota/capacity checks m
 - Implemented repo-contained GitHub learning foundation on 2026-10-15: validation script, schedule watcher, online baseline, GitHub Actions workflows, issue template, PR template, and learning-path documentation. Local validation and watcher runs passed.
 - User directed deployment to the current connected GitHub account on 2026-10-15. Created private repository `joworthe_microsoft/ppcc-us-pro-kbyg` and pushed `main`: https://github.com/joworthe_microsoft/ppcc-us-pro-kbyg.
 - GitHub-hosted Actions runners are disabled for the managed account/repository. Automatic push/cron triggers were paused to avoid repeated failures; local validation/watcher commands remain functional, and workflows can be re-enabled when hosted runners or a self-hosted runner are available.
+- User signed into personal GitHub account `jjworthen` on 2026-10-15. Created private repository `jjworthen/ppcc-us-pro-kbyg` and pushed the same `main` branch as a second remote: https://github.com/jjworthen/ppcc-us-pro-kbyg.

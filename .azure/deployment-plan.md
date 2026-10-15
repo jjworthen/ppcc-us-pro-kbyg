@@ -1,6 +1,6 @@
 # Azure Deployment Plan
 
-> **Status:** GitHub foundation implemented locally; remote push pending personal GitHub authentication
+> **Status:** GitHub foundation pushed to private Microsoft-managed repo
 
 Generated: 2026-10-15
 
@@ -177,4 +177,5 @@ Before any Azure deployment, subscription, location, and quota/capacity checks m
 - Filled plan with a GitHub-first, Azure Functions-second learning roadmap.
 - Verified reference pattern on 2026-10-15: Jake Gardner's `jgardn22/ppcc-kbyg` repository is a public, non-fork personal-namespace GitHub repository published through project GitHub Pages at `jgardn22.github.io/ppcc-kbyg`, with no license metadata reported by GitHub.
 - Verified Sean Galliher pattern on 2026-10-15: `seangalliher` is a personal GitHub namespace with multiple public idea-sharing repositories. Updated recommendation: use a personal namespace for long-term learning/portfolio publishing, but keep this specific PPCC guide private until employee photos, LinkedIn links, conference details, and partner/event content are cleared for external publication.
-- Implemented repo-contained GitHub learning foundation on 2026-10-15: validation script, schedule watcher, online baseline, GitHub Actions workflows, issue template, PR template, and learning-path documentation. Local validation and watcher runs passed. GitHub remote creation/push remains pending because the currently authenticated CLI account is `joworthe_microsoft` and the chosen direction is to use a personal namespace.
+- Implemented repo-contained GitHub learning foundation on 2026-10-15: validation script, schedule watcher, online baseline, GitHub Actions workflows, issue template, PR template, and learning-path documentation. Local validation and watcher runs passed.
+- User directed deployment to the current connected GitHub account on 2026-10-15. Created private repository `joworthe_microsoft/ppcc-us-pro-kbyg` and pushed `main`: https://github.com/joworthe_microsoft/ppcc-us-pro-kbyg.

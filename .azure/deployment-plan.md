@@ -1,6 +1,6 @@
 # Azure Deployment Plan
 
-> **Status:** Planning
+> **Status:** GitHub foundation implemented locally; remote push pending personal GitHub authentication
 
 Generated: 2026-10-15
 

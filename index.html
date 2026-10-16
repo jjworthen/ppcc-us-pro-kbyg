@@ -889,10 +889,12 @@
       fragment.append(grid);appendUntimedCalendar(fragment,dates,untimed);return fragment;
     }
     function renderCalendar(entries) {
-      $("events").append(create("p","Pacific time. Timed cards scale vertically from start to end; overlapping events sit side by side. Select a title for full details.","small calendar-mode-note"));
-      const dates=["2026-10-27","2026-10-28","2026-10-29"];
+      $("events").append(create("p","Pacific time. Timed cards scale vertically from start to end; overlapping events sit side by side. Days without timed events are hidden so active days have more space. Select a title for full details.","small calendar-mode-note"));
+      const dates=days.filter(date=>entries.some(e=>e.date===date&&e.start&&e.end));
       const conferenceEntries=entries.filter(e=>dates.includes(e.date));
-      if(dates.length&&conferenceEntries.length)$("events").append(renderScaledCalendar(conferenceEntries,dates,"Time-scaled three-day event calendar, October 27 through 29, Pacific time"));
+      const labelDates=dates.map(dayLabel);
+      const labelDays=labelDates.length>2?labelDates.slice(0,-1).join(", ")+", and "+labelDates.at(-1):labelDates.join(" and ");
+      if(dates.length&&conferenceEntries.length)$("events").append(renderScaledCalendar(conferenceEntries,dates,"Time-scaled event calendar for "+labelDays+", Pacific time"));
       else if(dates.length)$("events").append(create("p","No events listed for this day.","calendar-empty"));
     }
     function renderEvents() {

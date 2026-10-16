@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-15T16:16:49.481Z",
+  "generatedAt": "2026-10-16T17:40:25.289Z",
   "mode": "online",
   "guide": {
-    "generatedAt": "2026-10-15T16:16:49.496Z",
-    "guideHash": "98B19F42D06D66B1BE9741981AAD970466682180782DE9242403E28BC8EE2EBF",
+    "generatedAt": "2026-10-16T17:40:25.305Z",
+    "guideHash": "FDC925EE706474B6E50F71FEA18E0C3E761E74D8AD73588D79B9A95BB189C8C1",
     "sessions": [
       {
         "key": "session:mcs-retrieval-agents",
@@ -158,6 +158,25 @@
         "priority": "",
         "publicUse": "",
         "contentHash": "76C5C5CF89D7CEF9ABFD49B770D38AB291EAC2B3B053E264D390E26AA184D402"
+      },
+      {
+        "key": "event:hso-microsoft-happy-hour",
+        "kind": "event",
+        "id": "hso-microsoft-happy-hour",
+        "title": "HSO + Microsoft - PPCC Happy Hour Event",
+        "date": "2026-10-27",
+        "start": "18:00",
+        "end": "21:00",
+        "location": "BrewDog Las Vegas, 3767 Las Vegas Blvd S",
+        "description": "Happy hour hosted by HSO and Microsoft at BrewDog Las Vegas. Confirm eligibility and RSVP instructions with the host invitation; no registration URL was supplied with the image.",
+        "url": "",
+        "source": "team-asset",
+        "notes": "User supplied invitation image on October 16, 2026: Tuesday, October 27, 6-9 PM at BrewDog Las Vegas, 3767 Las Vegas Blvd S, Las Vegas, NV 89109. The image shows a Start now button but no recoverable registration URL, so no link is inferred.",
+        "speaker": "",
+        "speakers": [],
+        "priority": "",
+        "publicUse": "",
+        "contentHash": "8F5F6A965D6E3F2BDBE913ECE5069C229FA719D6B85602AA0F1E16E21E512349"
       },
       {
         "key": "event:root16-lounge-emerils",
@@ -547,8 +566,8 @@
       "source": "official",
       "status": "200",
       "finalUrl": "https://powerplatformconf.com/sessions/Recommended-Architectural-Patterns-%26-Common-Pitfalls-for-MCS-Retrieval-Agents",
-      "fetchedAt": "2026-10-15T16:16:49.767Z",
-      "durationMs": 266,
+      "fetchedAt": "2026-10-16T17:40:25.815Z",
+      "durationMs": 505,
       "pageTitle": "Recommended Architectural Patterns &amp; Common… | PPCC26",
       "contentHash": "70B05F03430572DDA1410408B061A14F23128414F14E75627483E746CDB18BA6"
     },
@@ -561,8 +580,8 @@
       "source": "official",
       "status": "404",
       "finalUrl": "https://powerplatformconf.com/sessions/No-Pilots.-No-POCs.-Only-Demos-of-GenAI-Agents-and-Apps-in-Production.",
-      "fetchedAt": "2026-10-15T16:16:49.855Z",
-      "durationMs": 88,
+      "fetchedAt": "2026-10-16T17:40:25.934Z",
+      "durationMs": 119,
       "pageTitle": "Power Platform Community Conference 2026 | Las Vegas",
       "contentHash": "A2381E8F8EEA54BDAD897D1E5DC23C27B08D387CE2958F9C592166B590AA9189"
     },
@@ -575,8 +594,8 @@
       "source": "official",
       "status": "404",
       "finalUrl": "https://powerplatformconf.com/sessions/How-Production-GenAI-Agents-get-Built%2C-Deployed%2C-Funded-%26-Cost-Optimized",
-      "fetchedAt": "2026-10-15T16:16:49.969Z",
-      "durationMs": 114,
+      "fetchedAt": "2026-10-16T17:40:26.050Z",
+      "durationMs": 116,
       "pageTitle": "Power Platform Community Conference 2026 | Las Vegas",
       "contentHash": "CB9E02E10983D3C582D0A49F52FF85E01AE04957E9F7970CB9952DF76C1CA307"
     },
@@ -589,8 +608,8 @@
       "source": "official-flyer",
       "status": "404",
       "finalUrl": "https://powerplatformconf.com/sessions/Innovation-Unleashed---How-AEC-Leaders-Are-Putting-AI-Agents-to-Work",
-      "fetchedAt": "2026-10-15T16:16:50.079Z",
-      "durationMs": 110,
+      "fetchedAt": "2026-10-16T17:40:26.136Z",
+      "durationMs": 86,
       "pageTitle": "Power Platform Community Conference 2026 | Las Vegas",
       "contentHash": "AFE6ABDE1C5A16E9DA3119A24D04807D5636AA617F7383FD9285B750BD926484"
     },
@@ -603,8 +622,8 @@
       "source": "official-flyer",
       "status": "404",
       "finalUrl": "https://powerplatformconf.com/sessions/Design.-Build.-Automate%3A-Transforming-AEC-Business-Processes-with-Code-Apps%2C-Agents%2C-and-Workflows",
-      "fetchedAt": "2026-10-15T16:16:50.205Z",
-      "durationMs": 126,
+      "fetchedAt": "2026-10-16T17:40:26.268Z",
+      "durationMs": 132,
       "pageTitle": "Power Platform Community Conference 2026 | Las Vegas",
       "contentHash": "01F19FFEF7395D50ED3F2653B1C9F9469C6BCA9955A2680912971DD02DB0D93B"
     },
@@ -617,8 +636,8 @@
       "source": "",
       "status": "200",
       "finalUrl": "https://powerplatformconf.com/",
-      "fetchedAt": "2026-10-15T16:16:50.281Z",
-      "durationMs": 75,
+      "fetchedAt": "2026-10-16T17:40:26.358Z",
+      "durationMs": 91,
       "pageTitle": "Power Platform Community Conference 2026 | Las Vegas",
       "contentHash": "C6DC9770559EA9036FFD2C10832BACED0A8A5B1D5D27EEC6EEB2A1CE38CA366A"
     },
@@ -631,8 +650,8 @@
       "source": "team-asset",
       "status": "404",
       "finalUrl": "https://assets-usa.mkt.dynamics.com/26f01a67-1f8c-45da-a661-979b54ab257b/digitalassets/standaloneforms/182e031a-369b-f111-b8db-000d3a315f99",
-      "fetchedAt": "2026-10-15T16:16:51.899Z",
-      "durationMs": 1618,
+      "fetchedAt": "2026-10-16T17:40:28.068Z",
+      "durationMs": 1709,
       "pageTitle": "",
       "contentHash": "E0475BC144473F4017D7EC081676D473B431A5F95E66217C44E444132B5957D3"
     },
@@ -645,8 +664,8 @@
       "source": "team-asset",
       "status": "200",
       "finalUrl": "https://cnj95.share.hsforms.com/2LBk1usVsRli0paGrGhYWiQ",
-      "fetchedAt": "2026-10-15T16:16:52.183Z",
-      "durationMs": 284,
+      "fetchedAt": "2026-10-16T17:40:28.287Z",
+      "durationMs": 219,
       "pageTitle": "Form",
       "contentHash": "4AB5F1F43FC87BCB1838BDDCC66C94BF3D7FF76570F8049BC7BAD32EAE713922"
     },
@@ -659,8 +678,8 @@
       "source": "team-asset",
       "status": "200",
       "finalUrl": "https://events.ttecdigital.com/microsoft-power-platform-community-conference-dinner/",
-      "fetchedAt": "2026-10-15T16:16:52.588Z",
-      "durationMs": 405,
+      "fetchedAt": "2026-10-16T17:40:28.678Z",
+      "durationMs": 394,
       "pageTitle": "TTEC Digital Microsoft Power Platform Community Conference Dinner",
       "contentHash": "FAC129137F589918141375D4651C7029A29091CD0D284BB791B3055C805CC7C7"
     },
@@ -673,8 +692,8 @@
       "source": "team-asset",
       "status": "200",
       "finalUrl": "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=a2ODZVbRLkmGzrj8y3kN8Y4owkqkyRtJouHxvCySKpdUNDRGS1YzTU9RTUNPNTJHRUJPMDI3RjA2RC4u",
-      "fetchedAt": "2026-10-15T16:16:52.876Z",
-      "durationMs": 287,
+      "fetchedAt": "2026-10-16T17:40:28.899Z",
+      "durationMs": 218,
       "pageTitle": "Microsoft Forms",
       "contentHash": "FC530B30F1251B1E864445C88813F7B26D618EC6CF7F2BC442CC1477F3580CAD"
     }

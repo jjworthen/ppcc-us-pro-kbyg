@@ -92,6 +92,11 @@ export function normalizeRecord(kind, item) {
     location: item.location ?? "",
     description: item.description ?? "",
     url: item.url ?? "",
+    ...(item.registrationUrl ? { registrationUrl: item.registrationUrl } : {}),
+    ...(kind === "event" && item.participation ? {
+      participation: item.participation,
+      participationNote: item.participationNote ?? ""
+    } : {}),
     source: item.source ?? "",
     notes: item.notes ?? "",
     speaker: item.speaker ?? "",
@@ -169,11 +174,11 @@ function classifyChange(label, before, after) {
   for (const field of ["date", "start", "end", "location", "title"]) {
     if ((before[field] ?? "") !== (after[field] ?? "")) return "High";
   }
-  if ((before.url ?? "") !== (after.url ?? "")) return "Medium";
+  if (["url", "registrationUrl", "participation"].some(field => (before[field] ?? "") !== (after[field] ?? ""))) return "Medium";
   return "Low";
 }
 
 function summarizeItem(item) {
-  const fields = ["title", "name", "date", "start", "end", "location", "url", "status", "contentHash"];
+  const fields = ["title", "name", "date", "start", "end", "location", "url", "registrationUrl", "participation", "participationNote", "status", "contentHash"];
   return Object.fromEntries(fields.filter(field => item[field]).map(field => [field, item[field]]));
 }

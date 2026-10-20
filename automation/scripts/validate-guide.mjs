@@ -10,6 +10,7 @@ const warnings = [];
 
 validateStaticHtml(html);
 validateJsonBlocks(html);
+validateParticipation(html);
 await validateInlineJavaScript(html);
 validateTeamCards(html);
 
@@ -50,6 +51,40 @@ function validateStaticHtml(markup) {
 function validateJsonBlocks(markup) {
   for (const id of ["map-assets", "speaker-assets", "guide-data"]) {
     parseJsonScript(markup, id);
+  }
+}
+
+function validateParticipation(markup) {
+  const data = parseJsonScript(markup, "guide-data");
+  const linked = new Set(["register", "confirm-eligibility", "link-unverified", "conference"]);
+  const unlinked = new Set(["contact", "invitation-only", "no-rsvp", "link-pending", "signup-unconfirmed"]);
+  const reviewed = Date.parse(data.participationReviewed);
+  if (typeof data.participationReviewed !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(data.participationReviewed) || !Number.isFinite(reviewed) || new Date(reviewed).toISOString().slice(0, 10) !== data.participationReviewed) {
+    failures.push("event participation needs a valid ISO review date");
+  }
+  if (!Array.isArray(data.events)) {
+    failures.push("guide-data events must be an array");
+    return;
+  }
+  for (const event of data.events) {
+    if (!linked.has(event.participation) && !unlinked.has(event.participation)) {
+      failures.push(`unsupported participation status for ${event.id}`);
+    }
+    if (typeof event.participationNote !== "string" || !event.participationNote.trim()) {
+      failures.push(`missing participation next step for ${event.id}`);
+    }
+    const destination = event.registrationUrl || event.url;
+    if (linked.has(event.participation) !== Boolean(destination)) {
+      failures.push(`participation status and destination disagree for ${event.id}`);
+    }
+    for (const field of ["url", "registrationUrl"]) {
+      if (!event[field]) continue;
+      if (!URL.canParse(event[field]) || new URL(event[field]).protocol !== "https:") {
+        failures.push(`invalid HTTPS ${field} for ${event.id}`);
+      } else if (/(^|\.)(sharepoint\.com|outlook\.office\.com|outlook\.office365\.com|teams\.microsoft\.com)$/i.test(new URL(event[field]).hostname)) {
+        failures.push(`internal evidence URL must not be an event destination for ${event.id}`);
+      }
+    }
   }
 }
 

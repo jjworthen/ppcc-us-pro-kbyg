@@ -124,7 +124,6 @@
       <p class="lede">Five pathways for turning conference ideas into practical next steps. Pick one theme to see its recommendations, then build your agenda and a backup in Whova.</p>
       <div id="keynote-recommendation"></div>
       <div class="pathway-options" id="pathway-options" role="group" aria-label="Learning pathways"></div>
-      <p class="small" id="learning-status" role="status" aria-live="polite"></p>
       <div class="pathway-heading"><h3 id="pathway-title"></h3><p class="muted" id="pathway-goal"></p></div>
       <div class="learning-grid" id="pathway-sessions" aria-labelledby="pathway-title"></div>
       <details class="learning-more" id="pathway-more"><summary id="pathway-more-title">More in this theme</summary><div class="learning-grid" id="pathway-extra"></div></details>
@@ -1498,7 +1497,8 @@
     try { learning=learningModel.validate(JSON.parse($("learning-data").textContent),data); }
     catch(error) {
       const message="Session recommendations unavailable: "+error.message+" Use the official catalogs below.";
-      $("learning-status").textContent=message;$("learning-status").classList.add("notice");
+      const notice=create("p",message,"notice");notice.setAttribute("role","alert");
+      $("pathway-sessions").append(notice);
       $("workshop-recommendations").append(create("p",message,"notice"));
       $("pathway-more").hidden=true;
     }
@@ -1827,8 +1827,6 @@
       $("pathway-extra").replaceChildren(...track.more.map(learningCard));
       $("pathway-more").hidden=!track.more.length;$("pathway-more").open=false;
       $("pathway-more-title").textContent="More in this theme ("+track.more.length+")";
-      const verified=track.primary.filter(id=>Boolean(learningSessions.get(id).url)).length,unconfirmed=[...track.primary,...track.more].filter(id=>!learningSessions.get(id).url).length;
-      $("learning-status").textContent=track.label+": "+verified+" verified primary recommendations."+(unconfirmed?" "+unconfirmed+" recommendation"+(unconfirmed===1?" has":"s have")+" an unconfirmed listing; no session link or timing is assumed.":"");
       renderedTrack=track.id;
     }
     function setupLearning() {

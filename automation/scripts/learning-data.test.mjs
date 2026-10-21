@@ -44,6 +44,11 @@ test("each pathway requires at least one primary recommendation", () => {
   assert.throws(() => model.validate(changed, guide), /at least one primary recommendation/);
 });
 
+test("pathway recommendation-count lines are removed while pathway controls remain", () => {
+  assert.doesNotMatch(html, /learning-status|verified primary recommendations/);
+  assert.match(html, /id="pathway-options" role="group" aria-label="Learning pathways"/);
+});
+
 test("standalone builder lists are removed while speaker profiles remain on cards", () => {
   assert.ok(!Object.hasOwn(learning, "builders"));
   for (const track of learning.tracks) assert.ok(!Object.hasOwn(track, "builders"));

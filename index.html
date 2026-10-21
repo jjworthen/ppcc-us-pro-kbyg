@@ -28,6 +28,7 @@
     @media(max-width:600px){.calendar-grid-head{font-size:.7rem;padding:10px 5px}.calendar-time-marker{font-size:.62rem;padding:0 4px}.calendar-block{padding:5px;border-left-width:2px}.calendar-block .calendar-event-link{font-size:.68rem}.calendar-block>span{font-size:.6rem}}
     .session-tags{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0}
     details{border:1px solid var(--line);border-radius:12px;background:var(--card);padding:18px 20px;margin-bottom:12px}summary{cursor:pointer;font-weight:700}details p{color:var(--muted);margin:14px 0 0}.links a{display:block;margin:14px 0}.help{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#111d2d;padding:32px 0}.help .wrap{display:flex;gap:32px;align-items:center;justify-content:space-between}.help h2{font-size:1.6rem;margin-bottom:10px}.help p{color:var(--muted);max-width:650px;margin-bottom:0}footer{padding:32px 0;color:var(--muted);font-size:.8rem}footer b{color:white}dialog{color:var(--text);background:var(--card);border:1px solid #637492;border-radius:18px;width:min(680px,calc(100% - 32px));max-height:90vh;padding:28px}dialog::backdrop{background:#000b}dialog h2{font-size:1.8rem}.dialoghead{display:flex;justify-content:space-between;align-items:start;gap:12px}.formrow{display:block;margin:16px 0}.formrow input,.formrow textarea{display:block;width:100%;margin-top:6px}.formrow textarea{min-height:100px}.output{white-space:pre-wrap;overflow-wrap:anywhere;font-size:.85rem;background:#0b1220;padding:18px;border-radius:12px}#cowork-copy{display:block;width:100%;height:260px;margin-top:14px}.status{color:#ffdaa1;min-height:1.6em}.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+    footer{display:flex;flex-wrap:wrap;align-items:flex-end;gap:16px 24px}.footer-copy{flex:1 1 420px;min-width:0}.footer-copy p{margin-bottom:0}.footer-copy .status:empty{display:none}.copilot-credit{display:flex;align-items:center;gap:8px;flex:0 0 auto;margin:0 0 0 auto;white-space:nowrap}.copilot-credit svg{display:block;flex:none;fill:currentColor}
     @media(max-width:850px){.hero{grid-template-columns:1fr;gap:36px}.hero-copy{max-width:650px}.identity{width:130px}.identity span{font-size:2.4rem}.identity b{font-size:1.3rem}.identity small{font-size:.5rem}.twocol{grid-template-columns:1fr}.plan{position:static}.cards,.index,.map-gallery{grid-template-columns:1fr}.help .wrap{display:block}.help .buttons{margin-top:22px}.visual h2{font-size:2.6rem}.edition{font-size:.65rem}h1 br{display:none}h1{max-width:630px}nav{gap:22px}}
     @media(max-width:480px){.wrap{width:calc(100% - 32px)}.masthead{padding-block:14px}.wordmark b{font-size:.95rem}.wordmark small{font-size:.5rem}.orb{width:28px;height:28px}.edition span{display:none}nav a{font-size:.72rem}.panel{padding-top:32px}.visual{padding:22px;aspect-ratio:auto;min-height:270px}.visual h2{font-size:2.1rem}.quicktopics{gap:16px}.facts{gap:16px}.facts dd{font-size:.9rem}.card{padding:20px}.progressrow{align-items:start}.help .buttons .btn{width:100%}}
     .conference-logo{display:block;width:262px;height:auto;max-width:100%}#start>.eyebrow{margin-bottom:10px}#start-title{width:100%;max-width:none;font-size:clamp(2.25rem,6vw,5.25rem);margin-bottom:12px}.start-intro{max-width:none;margin-bottom:18px}
@@ -170,7 +171,34 @@
       <div class="card links"><h3>Worth bookmarking</h3><a href="https://powerplatformconf.com/" target="_blank" rel="noopener noreferrer">Official conference website</a><a href="https://powerplatformconf.com/sessions" target="_blank" rel="noopener noreferrer">Sessions and speakers</a><a href="https://powerplatformconf.com/workshops" target="_blank" rel="noopener noreferrer">Optional workshops</a><a href="https://whova.com/pages/attendee-guide/" target="_blank" rel="noopener noreferrer">Whova attendee guide</a><a href="https://powerplatformconf.com/faq" target="_blank" rel="noopener noreferrer">Official conference FAQ</a><a href="https://powerplatformconf.com/register" target="_blank" rel="noopener noreferrer">Registration</a><a href="https://mgmgrand.mgmresorts.com/" target="_blank" rel="noopener noreferrer">MGM Grand</a></div>
     </section>
   </main>
-  <footer class="wrap"><p><b>US PRO &middot; Know Before You Go &middot; PPCC 2026</b><br>Unofficial client companion. No affiliation with or endorsement by the conference organizer is implied.</p><p id="page-status" class="status" role="status"></p></footer>
+  <footer class="wrap">
+    <div class="footer-copy"><p><b>US PRO &middot; Know Before You Go &middot; PPCC 2026</b><br>Unofficial client companion. No affiliation with or endorsement by the conference organizer is implied.</p><p id="page-status" class="status" role="status"></p></div>
+    <!--
+    GitHub Copilot icon: https://github.com/primer/octicons/blob/main/icons/copilot-24.svg
+    MIT License
+
+    Copyright (c) 2026 GitHub Inc.
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE.
+    -->
+    <p class="copilot-credit"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M23.922 16.992c-.861 1.495-5.859 5.023-11.922 5.023-6.063 0-11.061-3.528-11.922-5.023A.641.641 0 0 1 0 16.736v-2.869a.841.841 0 0 1 .053-.22c.372-.935 1.347-2.292 2.605-2.656.167-.429.414-1.055.644-1.517a10.195 10.195 0 0 1-.052-1.086c0-1.331.282-2.499 1.132-3.368.397-.406.89-.717 1.474-.952 1.399-1.136 3.392-2.093 6.122-2.093 2.731 0 4.767.957 6.166 2.093.584.235 1.077.546 1.474.952.85.869 1.132 2.037 1.132 3.368 0 .368-.014.733-.052 1.086.23.462.477 1.088.644 1.517 1.258.364 2.233 1.721 2.605 2.656a.832.832 0 0 1 .053.22v2.869a.641.641 0 0 1-.078.256ZM12.172 11h-.344a4.323 4.323 0 0 1-.355.508C10.703 12.455 9.555 13 7.965 13c-1.725 0-2.989-.359-3.782-1.259a2.005 2.005 0 0 1-.085-.104L4 11.741v6.585c1.435.779 4.514 2.179 8 2.179 3.486 0 6.565-1.4 8-2.179v-6.585l-.098-.104s-.033.045-.085.104c-.793.9-2.057 1.259-3.782 1.259-1.59 0-2.738-.545-3.508-1.492a4.323 4.323 0 0 1-.355-.508h-.016.016Zm.641-2.935c.136 1.057.403 1.913.878 2.497.442.544 1.134.938 2.344.938 1.573 0 2.292-.337 2.657-.751.384-.435.558-1.15.558-2.361 0-1.14-.243-1.847-.705-2.319-.477-.488-1.319-.862-2.824-1.025-1.487-.161-2.192.138-2.533.529-.269.307-.437.808-.438 1.578v.021c0 .265.021.562.063.893Zm-1.626 0c.042-.331.063-.628.063-.894v-.02c-.001-.77-.169-1.271-.438-1.578-.341-.391-1.046-.69-2.533-.529-1.505.163-2.347.537-2.824 1.025-.462.472-.705 1.179-.705 2.319 0 1.211.175 1.926.558 2.361.365.414 1.084.751 2.657.751 1.21 0 1.902-.394 2.344-.938.475-.584.742-1.44.878-2.497Z"/><path d="M14.5 14.25a1 1 0 0 1 1 1v2a1 1 0 0 1-2 0v-2a1 1 0 0 1 1-1Zm-5 0a1 1 0 0 1 1 1v2a1 1 0 0 1-2 0v-2a1 1 0 0 1 1-1Z"/></svg><span>built with GitHub Copilot</span></p>
+  </footer>
   <dialog id="event-detail" aria-labelledby="event-detail-title">
     <div class="dialoghead"><h2 id="event-detail-title">Event</h2><button class="btn" id="event-detail-close" type="button">Close</button></div>
     <div id="event-detail-body"></div>

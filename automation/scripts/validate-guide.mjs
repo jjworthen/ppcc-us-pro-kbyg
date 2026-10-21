@@ -2,7 +2,7 @@ import { mkdtemp, writeFile, rm } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { spawnSync } from "node:child_process";
-import { extractScripts, extractTeamCards, parseJsonScript, readText } from "./guide-utils.mjs";
+import { extractScripts, extractTeamCards, parseJsonScript, readLearningModel, readText } from "./guide-utils.mjs";
 
 const html = await readText("index.html");
 const failures = [];
@@ -11,6 +11,8 @@ const warnings = [];
 validateStaticHtml(html);
 validateJsonBlocks(html);
 validateParticipation(html);
+validateLearning(html);
+validatePresenters(html);
 await validateInlineJavaScript(html);
 validateTeamCards(html);
 
@@ -49,8 +51,26 @@ function validateStaticHtml(markup) {
 }
 
 function validateJsonBlocks(markup) {
-  for (const id of ["map-assets", "speaker-assets", "guide-data"]) {
+  for (const id of ["map-assets", "speaker-assets", "guide-data", "learning-data"]) {
     parseJsonScript(markup, id);
+  }
+}
+
+function validateLearning(markup) {
+  try {
+    readLearningModel(markup).validate(parseJsonScript(markup, "learning-data"), parseJsonScript(markup, "guide-data"));
+  } catch (error) {
+    failures.push(`learning data: ${error.message}`);
+  }
+}
+
+function validatePresenters(markup) {
+  try {
+    const guide = parseJsonScript(markup, "guide-data");
+    const learning = parseJsonScript(markup, "learning-data");
+    readLearningModel(markup).validatePresenters(parseJsonScript(markup, "speaker-assets"), [...guide.sessions, ...learning.sessions]);
+  } catch (error) {
+    failures.push(`presenter assets: ${error.message}`);
   }
 }
 

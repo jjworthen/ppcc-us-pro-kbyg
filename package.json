@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "validate:guide": "node automation/scripts/validate-guide.mjs",
+    "test:guide": "node --test",
     "watch:schedule": "node automation/scripts/schedule-watch.mjs --online",
     "watch:schedule:offline": "node automation/scripts/schedule-watch.mjs --offline",
     "watch:schedule:baseline": "node automation/scripts/schedule-watch.mjs --online --update-baseline"

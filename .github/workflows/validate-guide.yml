@@ -23,3 +23,6 @@ jobs:
 
       - name: Validate static guide
         run: npm run validate:guide
+
+      - name: Test session recommendations
+        run: npm run test:guide

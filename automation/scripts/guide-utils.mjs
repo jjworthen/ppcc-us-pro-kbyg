@@ -2,6 +2,7 @@ import { readFile } from "node:fs/promises";
 import { createHash } from "node:crypto";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { Script } from "node:vm";
 
 export const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 
@@ -62,13 +63,26 @@ export function extractTeamCards(html) {
   return cards;
 }
 
+export function readLearningModel(html) {
+  const script = extractScripts(html).find(item => item.id === "learning-model");
+  if (!script) throw new Error("Missing learning-model validation script");
+  return new Script(`${script.body}\n;learningModel;`).runInNewContext({ URL }, { timeout: 1000 });
+}
+
 export function extractGuideSnapshot(html) {
   const guideData = parseJsonScript(html, "guide-data");
+  const learning = extractScripts(html).some(script => script.id === "learning-data")
+    ? parseJsonScript(html, "learning-data")
+    : { sessions: [], workshops: [] };
   const teamCards = extractTeamCards(html);
   return {
     generatedAt: new Date().toISOString(),
     guideHash: sha256(html),
-    sessions: (guideData.sessions ?? []).map(item => normalizeRecord("session", item)),
+    sessions: [
+      ...(guideData.sessions ?? []).map(item => normalizeRecord("session", item)),
+      ...learning.sessions.map(item => normalizeRecord("session", { ...item, source: "official" })),
+      ...learning.workshops.map(item => normalizeRecord("workshop", { ...item, source: "official" }))
+    ],
     events: (guideData.events ?? []).map(item => normalizeRecord("event", item)),
     team: teamCards.map(card => ({
       key: `team:${slug(card.name)}`,

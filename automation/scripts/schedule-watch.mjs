@@ -147,7 +147,8 @@ function renderReport({ current, previous, changes, updateBaseline }) {
   lines.push("");
   lines.push("## Current guide inventory");
   lines.push("");
-  lines.push(`- Sessions: ${current.guide.sessions.length}`);
+  lines.push(`- Sessions: ${current.guide.sessions.filter(record => record.kind === "session").length}`);
+  lines.push(`- Workshops: ${current.guide.sessions.filter(record => record.kind === "workshop").length}`);
   lines.push(`- Events: ${current.guide.events.length}`);
   lines.push(`- Team cards: ${current.guide.team.length}`);
   lines.push(`- Monitored source URLs: ${current.sources.length}`);
